@@ -1,5 +1,5 @@
 # FIREFinance
-Track your trades while also interacting with a community of people dedicated to FIRE movement
+Track your trades while also interacting with a community of people dedicated to the FIRE movement
 
 
 ## Core Fetures
@@ -30,3 +30,13 @@ Track your trades while also interacting with a community of people dedicated to
 ## CORE PRINCIPLES
 - community-centric approach (user feedback will dedicate where the app goes forward. What is good, and what to improve)
 - move fast, but not reckless on impelmentation (Run, but not into on coming traffic just to make it to the other side a bit faster)
+
+## Tech Stack
+### Backend
+- Spring Boot -> Requests via GraphQL and internal services through GRPC
+- PostgreSQL for DB
+- Redis for caching popular post
+
+
+### Frontend
+- Angular for webapp

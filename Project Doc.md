@@ -1,3 +1,7 @@
+Author: D3rrick La
+Version: 0.0.0
+
+
 ## Summary
 FIREFinance (PLACEHOLDER - name to be determine) is a social platform for anyone who wants to take their finances to the next level. Whether you are a beginner or an expert about all things finance, this platform is here for you to share your journey to financial freedom.
 The application is targetted towards 18 - 45 year olds, as based on own observations, that is the age range where people will tend to care about/know about FIRE. The application was born out of my desire to track my finances and have a centralized place
@@ -6,6 +10,9 @@ where I can see where is my money flowing, along with tracking my goals and if I
 This project will combine both the tracking of your finance with the social aspect of today's world. We will have a dedicated forms/post feature where uses can post their stories about their journey towards finance independence.
 
 
+
+## System Block Diagram
+- TODO
 
 
 
@@ -38,3 +45,27 @@ This project will combine both the tracking of your finance with the social aspe
 - **Node.js** – Runtime for Next.js and backend processing
 - **Supabase** – Cloud storage for images, authentication, and database management
 - **Yahoo API / Other Financial Stock API** – Market data for finance-related features
+
+
+## Risk
+### Cost
+
+### Competition
+
+### Third Party Limitations
+
+### Scope/Feasibility 
+
+
+
+## Use Cases
+
+
+
+## GUI Layout
+
+
+## ER Diagram
+
+------
+This Is the end of the Project Documentation

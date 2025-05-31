@@ -7,7 +7,7 @@ FIREFinance (PLACEHOLDER - name to be determine) is a social platform for anyone
 The application is targetted towards 18 - 45 year olds, as based on own observations, that is the age range where people will tend to care about/know about FIRE. The application was born out of my desire to track my finances and have a centralized place
 where I can see where is my money flowing, along with tracking my goals and if I am on target. Currently, there isn't a unified/easy way for people to track their finances, often relying on spreadsheets or clunking software with subscription models.
 
-This project will combine both the tracking of your finance with the social aspect of today's world. We will have a dedicated forms/post feature where uses can post their stories about their journey towards finance independence.
+This project will combine both the tracking of your finance with the social aspect of today's world. We will have a dedicated forms/post feature where uses can post their stories about their journey towards finance independence. The following document is a representation of how the project is being built, why we did it in such a way, and a reference point if we are getting off track.
 
 
 
@@ -25,7 +25,8 @@ This project will combine both the tracking of your finance with the social aspe
 ### Backend
 - **PostgreSQL** – Primary relational database
 - **Redis** – Used for caching community posts (image URLs stored externally)
-- **GraphQL** – API communication between frontend and backend
+- **GraphQL** – API communication between front end and back end
+- **Spring Boot** - Back end framework for business layer and data handling
 
 ### DevOps
 - **Git**

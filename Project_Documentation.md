@@ -87,12 +87,12 @@ A huge limitation I faced from my previous project was the APIs. TMDB does not h
 ## Use Cases
 *there is a github flowchart webapp out there, will be using that to create the use cases (Attributions as always provided in the document)*
 
-![image](https://github.com/user-attachments/assets/1a27daef-bb63-4ba9-b7f6-adb4231d352c)
+![image](https://github.com/user-attachments/assets/91c960d7-30b0-478a-b74a-ac07ed7b0c9d)
 
 #### RAW DATA
   CODE FOR https://flowchart.fun/
   
-    USER .shape_ellipse    
+    USER .shape_ellipse
       vists: websites .shape_diamond
         clicks_button: login page
           Login
@@ -122,8 +122,10 @@ A huge limitation I faced from my previous project was the APIs. TMDB does not h
               isSuccessful: (Overview)
 
 
+
 ## UML Diagram
-![image](https://github.com/user-attachments/assets/76d9f71d-d30d-4e29-a9f6-1a1a9859082e)
+![image](https://github.com/user-attachments/assets/97ba2f26-4385-4d4e-aedc-c41d70039589)
+
 
 
 

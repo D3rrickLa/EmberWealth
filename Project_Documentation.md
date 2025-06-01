@@ -51,7 +51,7 @@ This project will combine both the tracking of your finance with the social aspe
 
 ## Risk
 ### Cost
-In terms of cost, I really don't want to spend that much money, as in I don't want to end up as that one Vercel user with a 100k bill at the end of the month. We can mitigate this by using free tier solutions, hence the user of supabase for the DB (no idea for actual hosting), but if this does become popular, the project would need a way to generate income for the servers and other unforseen application cost. Additionally would need a domain promotion down the line, but I don't think that is necessary, at least at the time of writing this...
+In terms of cost, I really don't want to spend that much money, as in I don't want to end up as that one Vercel user with a 100k bill at the end of the month. We can mitigate this by using free tier solutions, hence the use of supabase for the DB (no idea for actual hosting), but if this does become popular, the project would need a way to generate income for the servers and other unforseen application cost. Additionally would need a domain promotion down the line, but I don't think that is necessary, at least at the time of writing this...
 
 ### Competition
 The main competition I see with this application are Ghostfolio, WealthFolio, Blossom, and Reddit. The first 2 already have an active fandbase and strong set of features at hand which means that competing against them would be difficult. Blossom and Reddit are techinically competitors in terms of the social aspect as they have community built around finance. Addition competitors not listed are Portfolio tracking website that already exist. The way to get around the competition, at least in my mind, is easy of use - at least for the portfolio side. The portolfio applications I mentioned before, I have used and while I like the design, some have limited features and are clusmy to import data, at least for the average consumer. I would be focusing on UX for the most part. As for the others... Blossom in its marketing, has 250K+ users with Reddit probably 1 billion+ users. 
@@ -121,25 +121,52 @@ A huge limitation I faced from my previous project was the APIs. TMDB does not h
             add: new record
               isSuccessful: (Overview)
 
-        
+
+## UML Diagram
+![image](https://github.com/user-attachments/assets/87bb4b2c-1c16-4d6b-8b46-fd18c2bab05e)
+
+
 
 ## GUI Layout
-
+*might be put off for a bit until we have the back end done*
 
 ## ER Diagram
+
+
+
 
 
 ## Approach to the Application
 For this application, we will be doing a Domain Driven Design pattern. The current project will be setup as a monolith application, because lets be honest, you are not scaling to millions of users, but with DDD, we can transition it from mono to microservices in the chance it does make sense to do so. We will also be following TDD - Test Driven Design. This will save use from ourselves with unit testing, I experienced the pain of code not working because of chooses maded weeks past. 
 
+
+The following are classes/systems we will need
+
+Classes
+- User (handled by DB provider)
+- Portfolio (Aggergate of all stocks held + other assets (e.g. cash, crypto, physical metals)
+- Asset (for categorizing your investments (e.g. stock, crypto, cash, etc.)
+- PriceHistory (for users who want historical performance)
+- Stock (things related to the stock itself (e.g. name, current price, Symbol, description, etc.)
+- Transaction (record of what the user performed - a trade action)
+- Tag (can tap assets or transaction for searchability and filtering)
+- Watchlist (a user may want to have a stock on a list without buying it)
+
+  
+- Post (when a user Post something on the forum)
+- Comments (For the forum post)
+  
+- Reporting (thing about bug report, a system where users can report a buy? Optional - didn't impelment it in the last app I made)
+  - AuditLog (store system activity to assist with debugging)
+---
 Timeline - WIP
-Planning: 2 days (incorporate Agile planning)
-Analysis: 2 days (user interviews and market research)
-Design: 5 days (rapid prototyping and user feedback)
-Implement: 7 days (adopt sprints for faster development)
-Test: 5 days (automated testing, CI/CD)
-Deploy: 2 days (streamlined deployment with CI/CD)
-Post-Launch: 2 days (monitoring and user support setup)
+- Planning: 5 days (incorporate Agile planning)
+- ~Analysis: 2 days (user interviews and market research)~
+- Design: 5 days (prototyping and workflow)
+- Implement: 1 month
+- Test: 7 days (automated testing, CI/CD)
+- Deploy: 2 days (streamlined deployment with CI/CD)
+- Post-Launch: 1 day (monitoring)
 
 3 sprints, 3 deliverables
 The Java backend + API setup

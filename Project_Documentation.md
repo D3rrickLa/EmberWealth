@@ -87,7 +87,7 @@ A huge limitation I faced from my previous project was the APIs. TMDB does not h
 ## Use Cases
 *there is a github flowchart webapp out there, will be using that to create the use cases (Attributions as always provided in the document)*
 
-![image](https://github.com/user-attachments/assets/f72fc6e3-9b6f-438c-9c99-6a13255b2ccd)
+![image](https://github.com/user-attachments/assets/1a27daef-bb63-4ba9-b7f6-adb4231d352c)
 
 #### RAW DATA
   CODE FOR https://flowchart.fun/

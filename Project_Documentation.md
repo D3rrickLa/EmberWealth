@@ -123,7 +123,7 @@ A huge limitation I faced from my previous project was the APIs. TMDB does not h
 
 
 ## UML Diagram
-![image](https://github.com/user-attachments/assets/27dc21c3-23a7-4bbe-903e-d4b496671e69)
+![image](https://github.com/user-attachments/assets/76d9f71d-d30d-4e29-a9f6-1a1a9859082e)
 
 
 
@@ -159,6 +159,16 @@ Classes
   
 - Reporting (thing about bug report, a system where users can report a buy? Optional - didn't impelment it in the last app I made)
   - AuditLog (store system activity to assist with debugging)
+ 
+
+
+Focus on getting users able to:
+
+Import/enter their trades
+View their portfolio
+Make posts about their experience
+Basic community interaction
+  
 ---
 Timeline - WIP
 - Planning: 5 days (incorporate Agile planning)

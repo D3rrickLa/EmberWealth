@@ -123,7 +123,8 @@ A huge limitation I faced from my previous project was the APIs. TMDB does not h
 
 
 ## UML Diagram
-![image](https://github.com/user-attachments/assets/87bb4b2c-1c16-4d6b-8b46-fd18c2bab05e)
+![image](https://github.com/user-attachments/assets/27dc21c3-23a7-4bbe-903e-d4b496671e69)
+
 
 
 

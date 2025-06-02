@@ -13,7 +13,239 @@ This project will combine both the tracking of your finance with the social aspe
 
 
 ## System Block Diagram
-- TODO
+![image](https://github.com/user-attachments/assets/8543aa8a-73fa-4206-bef5-e84f1cb4d9d9)
+
+
+*again, AI this thing, I know this is wrong, but it has the concept there
+    <svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Title -->
+      <text x="800" y="30" text-anchor="middle" font-weight="bold" font-size="20" fill="#1976d2">Personal Finance Platform - System Block Diagram</text>
+      
+      <!-- Client Layer -->
+      <g id="client-layer">
+        <rect x="50" y="80" width="1500" height="120" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="10"/>
+        <text x="800" y="100" text-anchor="middle" font-weight="bold" font-size="16" fill="#1976d2">CLIENT LAYER</text>
+        
+        <!-- Web App -->
+        <rect x="100" y="120" width="200" height="60" fill="#bbdefb" stroke="#1976d2" stroke-width="1" rx="5"/>
+        <text x="200" y="140" text-anchor="middle" font-weight="bold" font-size="12">Web Application</text>
+        <text x="200" y="155" text-anchor="middle" font-size="10">React/Vue/Angular</text>
+        <text x="200" y="170" text-anchor="middle" font-size="10">Portfolio Dashboard</text>
+        
+        <!-- Mobile App -->
+        <rect x="350" y="120" width="200" height="60" fill="#bbdefb" stroke="#1976d2" stroke-width="1" rx="5"/>
+        <text x="450" y="140" text-anchor="middle" font-weight="bold" font-size="12">Mobile Application</text>
+        <text x="450" y="155" text-anchor="middle" font-size="10">iOS/Android</text>
+        <text x="450" y="170" text-anchor="middle" font-size="10">Portfolio Tracking</text>
+        
+        <!-- Admin Panel -->
+        <rect x="600" y="120" width="200" height="60" fill="#bbdefb" stroke="#1976d2" stroke-width="1" rx="5"/>
+        <text x="700" y="140" text-anchor="middle" font-weight="bold" font-size="12">Admin Panel</text>
+        <text x="700" y="155" text-anchor="middle" font-size="10">Content Moderation</text>
+        <text x="700" y="170" text-anchor="middle" font-size="10">User Management</text>
+      </g>
+      
+      <!-- API Gateway -->
+      <g id="api-gateway">
+        <rect x="600" y="250" width="400" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="10"/>
+        <text x="800" y="275" text-anchor="middle" font-weight="bold" font-size="16" fill="#f57c00">API GATEWAY</text>
+        <text x="800" y="295" text-anchor="middle" font-size="12">Rate Limiting • Authentication • Routing</text>
+        <text x="800" y="310" text-anchor="middle" font-size="12">Load Balancing • Request/Response Logging</text>
+      </g>
+      
+      <!-- Application Layer -->
+      <g id="app-layer">
+        <rect x="50" y="380" width="1500" height="200" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="10"/>
+        <text x="800" y="400" text-anchor="middle" font-weight="bold" font-size="16" fill="#388e3c">APPLICATION LAYER (Backend Services)</text>
+        
+        <!-- User Service -->
+        <rect x="100" y="420" width="180" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" rx="5"/>
+        <text x="190" y="440" text-anchor="middle" font-weight="bold" font-size="12">User Service</text>
+        <text x="190" y="455" text-anchor="middle" font-size="10">• Authentication</text>
+        <text x="190" y="470" text-anchor="middle" font-size="10">• User Profiles</text>
+        <text x="190" y="485" text-anchor="middle" font-size="10">• Following System</text>
+        <text x="190" y="500" text-anchor="middle" font-size="10">• Settings</text>
+        
+        <!-- Portfolio Service -->
+        <rect x="320" y="420" width="180" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" rx="5"/>
+        <text x="410" y="440" text-anchor="middle" font-weight="bold" font-size="12">Portfolio Service</text>
+        <text x="410" y="455" text-anchor="middle" font-size="10">• Portfolio CRUD</text>
+        <text x="410" y="470" text-anchor="middle" font-size="10">• Asset Management</text>
+        <text x="410" y="485" text-anchor="middle" font-size="10">• Transaction History</text>
+        <text x="410" y="500" text-anchor="middle" font-size="10">• Performance Calc</text>
+        
+        <!-- Social Service -->
+        <rect x="540" y="420" width="180" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" rx="5"/>
+        <text x="630" y="440" text-anchor="middle" font-weight="bold" font-size="12">Social Service</text>
+        <text x="630" y="455" text-anchor="middle" font-size="10">• Posts & Comments</text>
+        <text x="630" y="470" text-anchor="middle" font-size="10">• Likes & Reactions</text>
+        <text x="630" y="485" text-anchor="middle" font-size="10">• Feed Generation</text>
+        <text x="630" y="500" text-anchor="middle" font-size="10">• Content Filtering</text>
+        
+        <!-- Market Data Service -->
+        <rect x="760" y="420" width="180" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" rx="5"/>
+        <text x="850" y="440" text-anchor="middle" font-weight="bold" font-size="12">Market Data Service</text>
+        <text x="850" y="455" text-anchor="middle" font-size="10">• Asset Prices</text>
+        <text x="850" y="470" text-anchor="middle" font-size="10">• Price History</text>
+        <text x="850" y="485" text-anchor="middle" font-size="10">• Watchlist Alerts</text>
+        <text x="850" y="500" text-anchor="middle" font-size="10">• Market News</text>
+        
+        <!-- File Upload Service -->
+        <rect x="980" y="420" width="180" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" rx="5"/>
+        <text x="1070" y="440" text-anchor="middle" font-weight="bold" font-size="12">File Service</text>
+        <text x="1070" y="455" text-anchor="middle" font-size="10">• CSV Import</text>
+        <text x="1070" y="470" text-anchor="middle" font-size="10">• Image Upload</text>
+        <text x="1070" y="485" text-anchor="middle" font-size="10">• File Validation</text>
+        <text x="1070" y="500" text-anchor="middle" font-size="10">• Storage Management</text>
+        
+        <!-- Notification Service -->
+        <rect x="1200" y="420" width="180" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" rx="5"/>
+        <text x="1290" y="440" text-anchor="middle" font-weight="bold" font-size="12">Notification Service</text>
+        <text x="1290" y="455" text-anchor="middle" font-size="10">• Email Alerts</text>
+        <text x="1290" y="470" text-anchor="middle" font-size="10">• Push Notifications</text>
+        <text x="1290" y="485" text-anchor="middle" font-size="10">• Price Alerts</text>
+        <text x="1290" y="500" text-anchor="middle" font-size="10">• Social Updates</text>
+      </g>
+      
+      <!-- Data Layer -->
+      <g id="data-layer">
+        <rect x="50" y="630" width="1500" height="150" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="10"/>
+        <text x="800" y="650" text-anchor="middle" font-weight="bold" font-size="16" fill="#d32f2f">DATA LAYER</text>
+        
+        <!-- Primary Database -->
+        <rect x="200" y="670" width="200" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1" rx="5"/>
+        <text x="300" y="690" text-anchor="middle" font-weight="bold" font-size="12">Primary Database</text>
+        <text x="300" y="705" text-anchor="middle" font-size="10">PostgreSQL/MySQL</text>
+        <text x="300" y="720" text-anchor="middle" font-size="10">User, Portfolio, Transaction</text>
+        <text x="300" y="735" text-anchor="middle" font-size="10">Post, Comment, Asset Data</text>
+        
+        <!-- Cache Layer -->
+        <rect x="450" y="670" width="200" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1" rx="5"/>
+        <text x="550" y="690" text-anchor="middle" font-weight="bold" font-size="12">Cache Layer</text>
+        <text x="550" y="705" text-anchor="middle" font-size="10">Redis/Memcached</text>
+        <text x="550" y="720" text-anchor="middle" font-size="10">User Sessions</text>
+        <text x="550" y="735" text-anchor="middle" font-size="10">Market Data Cache</text>
+        
+        <!-- File Storage -->
+        <rect x="700" y="670" width="200" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1" rx="5"/>
+        <text x="800" y="690" text-anchor="middle" font-weight="bold" font-size="12">File Storage</text>
+        <text x="800" y="705" text-anchor="middle" font-size="10">AWS S3/Google Cloud</text>
+        <text x="800" y="720" text-anchor="middle" font-size="10">CSV Files, Images</text>
+        <text x="800" y="735" text-anchor="middle" font-size="10">User Avatars</text>
+        
+        <!-- Search Engine -->
+        <rect x="950" y="670" width="200" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1" rx="5"/>
+        <text x="1050" y="690" text-anchor="middle" font-weight="bold" font-size="12">Search Engine</text>
+        <text x="1050" y="705" text-anchor="middle" font-size="10">Elasticsearch</text>
+        <text x="1050" y="720" text-anchor="middle" font-size="10">Post Search</text>
+        <text x="1050" y="735" text-anchor="middle" font-size="10">Asset Search</text>
+      </g>
+      
+      <!-- External Services -->
+      <g id="external-services">
+        <rect x="50" y="830" width="1500" height="120" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="10"/>
+        <text x="800" y="850" text-anchor="middle" font-weight="bold" font-size="16" fill="#7b1fa2">EXTERNAL SERVICES</text>
+        
+        <!-- Market Data APIs -->
+        <rect x="150" y="870" width="200" height="60" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1" rx="5"/>
+        <text x="250" y="890" text-anchor="middle" font-weight="bold" font-size="12">Market Data APIs</text>
+        <text x="250" y="905" text-anchor="middle" font-size="10">Alpha Vantage, Yahoo Finance</text>
+        <text x="250" y="920" text-anchor="middle" font-size="10">Real-time Stock Prices</text>
+        
+        <!-- Email Service -->
+        <rect x="400" y="870" width="200" height="60" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1" rx="5"/>
+        <text x="500" y="890" text-anchor="middle" font-weight="bold" font-size="12">Email Service</text>
+        <text x="500" y="905" text-anchor="middle" font-size="10">SendGrid, AWS SES</text>
+        <text x="500" y="920" text-anchor="middle" font-size="10">Notifications, Alerts</text>
+        
+        <!-- Payment Gateway -->
+        <rect x="650" y="870" width="200" height="60" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1" rx="5"/>
+        <text x="750" y="890" text-anchor="middle" font-weight="bold" font-size="12">Payment Gateway</text>
+        <text x="750" y="905" text-anchor="middle" font-size="10">Stripe, PayPal</text>
+        <text x="750" y="920" text-anchor="middle" font-size="10">Premium Subscriptions</text>
+        
+        <!-- Push Notification -->
+        <rect x="900" y="870" width="200" height="60" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1" rx="5"/>
+        <text x="1000" y="890" text-anchor="middle" font-weight="bold" font-size="12">Push Notifications</text>
+        <text x="1000" y="905" text-anchor="middle" font-size="10">Firebase, APNs</text>
+        <text x="1000" y="920" text-anchor="middle" font-size="10">Mobile Alerts</text>
+        
+        <!-- Analytics -->
+        <rect x="1150" y="870" width="200" height="60" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1" rx="5"/>
+        <text x="1250" y="890" text-anchor="middle" font-weight="bold" font-size="12">Analytics</text>
+        <text x="1250" y="905" text-anchor="middle" font-size="10">Google Analytics</text>
+        <text x="1250" y="920" text-anchor="middle" font-size="10">User Behavior Tracking</text>
+      </g>
+      
+      <!-- Infrastructure Layer -->
+      <g id="infrastructure">
+        <rect x="50" y="1000" width="1500" height="100" fill="#fff8e1" stroke="#ffa000" stroke-width="2" rx="10"/>
+        <text x="800" y="1020" text-anchor="middle" font-weight="bold" font-size="16" fill="#ffa000">INFRASTRUCTURE LAYER</text>
+        
+        <!-- Cloud Platform -->
+        <rect x="200" y="1040" width="300" height="40" fill="#ffecb3" stroke="#ffa000" stroke-width="1" rx="5"/>
+        <text x="350" y="1065" text-anchor="middle" font-weight="bold" font-size="12">Cloud Platform (AWS/GCP/Azure)</text>
+        
+        <!-- Container Orchestration -->
+        <rect x="550" y="1040" width="200" height="40" fill="#ffecb3" stroke="#ffa000" stroke-width="1" rx="5"/>
+        <text x="650" y="1065" text-anchor="middle" font-weight="bold" font-size="12">Kubernetes/Docker</text>
+        
+        <!-- Monitoring -->
+        <rect x="800" y="1040" width="200" height="40" fill="#ffecb3" stroke="#ffa000" stroke-width="1" rx="5"/>
+        <text x="900" y="1065" text-anchor="middle" font-weight="bold" font-size="12">Monitoring & Logging</text>
+        
+        <!-- CI/CD -->
+        <rect x="1050" y="1040" width="200" height="40" fill="#ffecb3" stroke="#ffa000" stroke-width="1" rx="5"/>
+        <text x="1150" y="1065" text-anchor="middle" font-weight="bold" font-size="12">CI/CD Pipeline</text>
+      </g>
+      
+      <!-- Connection Lines -->
+      <!-- Client to API Gateway -->
+      <line x1="200" y1="180" x2="700" y2="250" stroke="black" stroke-width="2"/>
+      <line x1="450" y1="180" x2="800" y2="250" stroke="black" stroke-width="2"/>
+      <line x1="700" y1="180" x2="900" y2="250" stroke="black" stroke-width="2"/>
+      
+      <!-- API Gateway to Services -->
+      <line x1="750" y1="330" x2="190" y2="420" stroke="black" stroke-width="1"/>
+      <line x1="780" y1="330" x2="410" y2="420" stroke="black" stroke-width="1"/>
+      <line x1="800" y1="330" x2="630" y2="420" stroke="black" stroke-width="1"/>
+      <line x1="820" y1="330" x2="850" y2="420" stroke="black" stroke-width="1"/>
+      <line x1="850" y1="330" x2="1070" y2="420" stroke="black" stroke-width="1"/>
+      <line x1="870" y1="330" x2="1290" y2="420" stroke="black" stroke-width="1"/>
+      
+      <!-- Services to Data Layer -->
+      <line x1="250" y1="520" x2="300" y2="670" stroke="black" stroke-width="1"/>
+      <line x1="450" y1="520" x2="300" y2="670" stroke="black" stroke-width="1"/>
+      <line x1="630" y1="520" x2="550" y2="670" stroke="black" stroke-width="1"/>
+      <line x1="850" y1="520" x2="550" y2="670" stroke="black" stroke-width="1"/>
+      <line x1="1070" y1="520" x2="800" y2="670" stroke="black" stroke-width="1"/>
+      
+      <!-- Services to External APIs -->
+      <line x1="850" y1="520" x2="250" y2="870" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
+      <line x1="1290" y1="520" x2="500" y2="870" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
+      <line x1="410" y1="520" x2="750" y2="870" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
+      <line x1="1290" y1="520" x2="1000" y2="870" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
+      
+      <!-- Arrow indicators -->
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+      </defs>
+      
+      <!-- Legend -->
+      <g id="legend">
+        <rect x="1350" y="250" width="200" height="120" fill="white" stroke="black" stroke-width="1"/>
+        <text x="1450" y="270" text-anchor="middle" font-weight="bold" font-size="12">LEGEND</text>
+        <line x1="1360" y1="285" x2="1390" y2="285" stroke="black" stroke-width="2"/>
+        <text x="1400" y="290" font-size="10">Synchronous Call</text>
+        <line x1="1360" y1="305" x2="1390" y2="305" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
+        <text x="1400" y="310" font-size="10">External API Call</text>
+        <text x="1360" y="330" font-size="10">Data Flow Direction:</text>
+        <text x="1360" y="345" font-size="10">Client → API → Services</text>
+        <text x="1360" y="360" font-size="10">→ Data → External</text>
+      </g>
+    </svg>
 
 
 

@@ -1,4 +1,4 @@
-# FIREFinance
+# EmberWealth
 Track your trades while also interacting with a community of people dedicated to the FIRE movement
 
 

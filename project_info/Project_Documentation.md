@@ -18,6 +18,7 @@ This project will combine both the tracking of your finance with the social aspe
 
 *again, AI this thing, I know this is wrong, but it has the concept there
     <svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+      
       <!-- Title -->
       <text x="800" y="30" text-anchor="middle" font-weight="bold" font-size="20" fill="#1976d2">Personal Finance Platform - System Block Diagram</text>
       

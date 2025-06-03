@@ -6,20 +6,18 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import com.laderrco.ember_wealth.user.domain.DisplayName;
 import com.laderrco.ember_wealth.user.domain.Email;
 import com.laderrco.ember_wealth.user.domain.User;
 
 public class UserTest {
 
     @Test
-    @DisplayName("Test User register. Created with valid data ")
     void shouldCreateUserWithValidData() {
         Email email = new Email("john@example.com");
-        com.laderrco.ember_wealth.user.domain.DisplayName displayName = new com.laderrco.ember_wealth.user.domain.DisplayName(
-                "JohnDoe23");
+        DisplayName displayName = new DisplayName("JohnDoe23");
 
         User user = new User(email, displayName);
 
@@ -36,11 +34,10 @@ public class UserTest {
     }
 
     @Test
-    @DisplayName("Should throw exception when display name is null")
     void shouldThrowExceptionWhenDisplayNameIsNull() {
         // Given
         Email email = new Email("john@example.com");
-        com.laderrco.ember_wealth.user.domain.DisplayName displayName = null;
+        DisplayName displayName = null;
 
         // When & Then
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
@@ -52,12 +49,40 @@ public class UserTest {
 
     @Test
     void shouldSetPrivacyStatusToFalse() {
-         
         Email email = new Email("john@example.com");
-        com.laderrco.ember_wealth.user.domain.DisplayName displayName = null;
+        DisplayName displayName = new DisplayName("johndoe34");
+
+        User user = new User(email, displayName);
+        user.togglePrivacy();
+        assertEquals(user.getIsPrivate(), true);
+    }
+
+    @Test
+    void shouldTogglePrivacySettings() {
+        Email email = new Email("john@example.com");
+        DisplayName displayName = new DisplayName("johndoe34");
+        User user = new User(email, displayName);
+        
+        user.togglePrivacy();
+        assertTrue(user.getIsPrivate());
+
+        user.togglePrivacy();
+        assertFalse(user.getIsPrivate());
+    }
+
+    @Test
+    void shouldUpdateDisplayName() {
+        Email email = new Email("john@example.com");
+        DisplayName displayName = new DisplayName("johndoe34");
         
         User user = new User(email, displayName);
-        user.makeAccountPrivate();
-        assertEquals(user.getIsPrivate(), true);
+        
+        DisplayName newDisplayName = new DisplayName("johndoe345");
+
+        user.updateUsername(newDisplayName);
+
+        assertEquals(user.getDisplayName(), newDisplayName);
+        
+
     }
 }

@@ -48,11 +48,19 @@ public class User {
         return userId;
     }
 
-    public void makeAccountPrivate() {
-        this.isPrivate = true;
+    public void togglePrivacy() {
+        this.isPrivate = !this.isPrivate;
     }
 
     public void updateUsername(DisplayName newUsername) {
+        this.displayName = newUsername;
+    }
+
+    public void follow(User otherUser) {
+
+    }
+
+    public void unFollow(User otherUser) {
         
     }
 
